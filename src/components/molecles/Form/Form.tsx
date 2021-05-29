@@ -12,11 +12,13 @@ export type FormProps = ButtonProps & FormInputProps;
 export const Form: React.FC<FormProps> = (props) => {
   return (
     <div className={styles.form}>
-      <FormInput
-        placeholder={props.placeholder}
-        onChange={props.onChange}
-        value={props.value}
-      />
+      <div className={styles.formWrapper}>
+        <FormInput
+          placeholder={props.placeholder}
+          onChange={props.onChange}
+          value={props.value}
+        />
+      </div>
       <Button
         text={props.text}
         disable={props.disable}
