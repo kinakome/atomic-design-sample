@@ -1,0 +1,13 @@
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.formWrapper {
+  width: calc(100% - 120px);
+  display: inline-block;
+}
+// input + button {
+//   margin-left: 10px;
+// }

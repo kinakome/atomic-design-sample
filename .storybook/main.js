@@ -10,8 +10,19 @@ module.exports = {
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.scss$/,
-      use: ['style-loader', 'css-loader', 'sass-loader'],
-      include: resolve(__dirname, '../'),
+      use: [
+        'style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 1, // 1 => postcss-loader
+            modules: {
+              localIdentName: '[local]___[hash:base64:2]',
+            },
+          },
+        },
+        'sass-loader',
+      ],
     });
     config.resolve.alias = {
       ...config.resolve.alias,

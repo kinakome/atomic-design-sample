@@ -1,0 +1,31 @@
+.small {
+  width: 70px;
+  height: 35px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 12px;
+}
+
+.medium {
+  width: 112px;
+  height: 40px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.disable {
+  border: 1px solid #3c2923;
+  background-color: transparent;
+  color: #3c2923;
+}
+
+.enable {
+  border: 1px solid #3c2923;
+  background-color: #3c2923;
+  color: white;
+  &:hover {
+    background-color: #61453c;
+  }
+}
