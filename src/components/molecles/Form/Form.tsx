@@ -21,6 +21,7 @@ export const Form: React.FC<FormProps> = (props) => {
         text={props.text}
         disable={props.disable}
         onClick={props.onClick}
+        size={props.size}
       />
     </div>
   );

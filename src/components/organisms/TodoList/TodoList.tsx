@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form } from 'components/molecles/Form/Form';
+import { Button } from 'components/atoms/Button/Button';
 import styles from './TodoList.module.scss';
 
 export const TodoList: React.FC = () => {
@@ -19,13 +20,19 @@ export const TodoList: React.FC = () => {
     setTask(input);
   };
 
-  const onClick = (e) => {
+  const addTask = (e) => {
     e.preventDefault();
     if (task !== '') {
       setTodos([...todos, task]);
       setTask('');
+      setDisable(true);
     }
-    console.log(todos);
+  };
+
+  const removeTask = (index) => {
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
   };
 
   return (
@@ -33,15 +40,24 @@ export const TodoList: React.FC = () => {
       <Form
         text="追加"
         disable={disable}
-        onClick={onClick}
+        onClick={addTask}
         onChange={onChange}
         placeholder="タスクを入力してください"
         value={task}
+        size="medium"
       />
       <ul className={styles.todos}>
         {todos.map((todo, index) => (
           <li key={index} className={styles.todo}>
-            {todo}
+            <div className={styles.text}>{todo}</div>
+            <div className={styles.button}>
+              <Button
+                size="small"
+                disable={false}
+                text="削除"
+                onClick={() => removeTask(index)}
+              />
+            </div>
           </li>
         ))}
       </ul>

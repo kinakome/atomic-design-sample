@@ -1,6 +1,7 @@
 .wrapper {
   width: 80%;
 }
+
 .todos {
   list-style: none;
   padding: 0;
@@ -9,4 +10,17 @@
 .todo {
   border-bottom: 1px solid;
   padding: 10px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.text {
+  display: inline-block;
+}
+
+.button {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 8px;
 }

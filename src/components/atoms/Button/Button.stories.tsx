@@ -9,7 +9,14 @@ export default {
 
 const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const Midium = Template.bind({});
+Midium.args = {
   text: 'ボタン',
+  size: 'medium',
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  text: 'ボタン',
+  size: 'small',
 };

@@ -13,4 +13,5 @@ export const Default = Template.bind({});
 Default.args = {
   placeholder: '初期表示',
   value: '',
+  size: 'medium',
 };
