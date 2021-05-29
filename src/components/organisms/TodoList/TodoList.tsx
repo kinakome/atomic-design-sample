@@ -4,7 +4,7 @@ import { Button } from 'components/atoms/Button/Button';
 import styles from './TodoList.module.scss';
 
 export const TodoList: React.FC = () => {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(['サンプルタスク1', 'サンプルタスク2']);
   const [task, setTask] = useState('');
 
   //入力されたらボタンをenableにする

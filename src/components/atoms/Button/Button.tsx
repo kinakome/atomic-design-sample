@@ -3,9 +3,9 @@ import styles from './Button.module.scss';
 
 export type ButtonProps = {
   text: string;
-  disable: boolean;
+  disable?: boolean;
   size: 'small' | 'medium';
-  onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 };
 
 export const Button: React.FC<ButtonProps> = (props) => {
@@ -18,3 +18,5 @@ export const Button: React.FC<ButtonProps> = (props) => {
     </button>
   );
 };
+
+Button.defaultProps = { disable: false };
