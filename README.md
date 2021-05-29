@@ -33,6 +33,10 @@
 
 - [参考](https://zenn.dev/higa/articles/d7bf3460dafb1734ef43#%E6%8A%80%E8%A1%93%E9%81%B8%E5%AE%9A)
 
+## CSS Modules の導入
+
+- [import 時にエラーが出た時の対処方法](https://blog.shimar.me/2020/12/05/nextjs-css-cannot-find-module)
+
 ## StoryBook の導入
 
 - [インストール方法](https://zenn.dev/higa/articles/d7bf3460dafb1734ef43#12.-%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E3%82%AB%E3%82%BF%E3%83%AD%E3%82%B0%E3%81%AE%E8%BF%BD%E5%8A%A0)

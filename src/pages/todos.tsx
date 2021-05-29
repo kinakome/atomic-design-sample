@@ -7,14 +7,15 @@ import styles from 'styles/Home.module.scss';
 import { TodoList } from 'components/organisms/TodoList/TodoList';
 import Link from 'next/link';
 
-const Home: NextPage = () => {
+const Todos: NextPage = () => {
   return (
     <div className={styles.container}>
-      <Link href="/todos">
-        <a>todos</a>
+      <Link href="/">
+        <a>home</a>
       </Link>{' '}
+      <TodoList />
     </div>
   );
 };
 
-export default Home;
+export default Todos;
